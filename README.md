@@ -13,3 +13,5 @@ This file contains the final report of SpeedUP using MPI
 This file contains the final report of SpeedUP using MP
 ## slurmBash.txt
 This script contains the required commands to launch a job with different commands from terminal using SLURM
+## naiveScript
+This script is for the naive sequential algorithm for matrix multiplication
