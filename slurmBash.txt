@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH –nodes=2
+
+#SBATCH –ntasks-per-node=16
+
+> machines.txt
+
+for i in $( nodeset -e ${SLURM_NODELIST} ) ;
+
+do
+
+echo -e « ${i} » >> machines .txt
+
+done
+
+mpirun -machinefile machines.txt MonProgramme

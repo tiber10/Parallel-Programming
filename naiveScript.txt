@@ -1,0 +1,32 @@
+#include <time.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#define N 1000
+#define ll  long long 
+ll a[N][N],b[N][N],c[N][N];
+int main() {
+    //freopen("angry.in","r",stdin);
+    //freopen("angry.out","w",stdout);
+    for (ll i=0;i<N;i++){
+        for(ll j=0;j<N;j++){
+            a[i][j]=5;
+            b[i][j]=8;
+        }
+    }
+     struct timeval start, stop;
+     gettimeofday(&start, 0);
+    for (ll i=0;i<N;i++){
+        for(ll j=0;j<N;j++){
+            for(ll k=0;k<N;k++){
+                c[i][j]+=a[i][k]*b[k][j];
+            }
+        }
+    }
+     gettimeofday(&stop, 0);
+     printf("Time = %.6f\n\n",(stop.tv_sec+stop.tv_usec*1e-6)-(start.tv_sec+start.tv_usec*1e-6));
+    
+	return 0;
+}
